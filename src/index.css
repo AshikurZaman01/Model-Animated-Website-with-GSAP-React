@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'FoundersGrotesk';
+    src: url(./assets/font/FoundersGrotesk-Semibold.otf) format('opentype'),
+         url(./assets/font/FoundersGrotesk-Semibold.woff2) format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Icomoon';
+    src: url(./assets/font/icomoon.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url(./assets/font/NeueMontreal-Regular.otf) format('opentype'),
+         url(./assets/font/NeueMontreal-Regular.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
