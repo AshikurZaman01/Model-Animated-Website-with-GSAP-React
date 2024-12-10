@@ -3,15 +3,18 @@ import Nav from "./Nav"
 
 const Navbar = () => {
     return (
-        <div className="w-full px-20 py-8 ">
+        <div className="w-full px-20 py-8  fixed z-[999]">
 
-            {/* logo */}
-            <Logo></Logo>
-            {/* logo */}
 
-            {/* nav */}
-            <Nav></Nav>
-            {/* nav */}
+            <div className="flex justify-between items-center">
+                {/* logo */}
+                <Logo></Logo>
+                {/* logo */}
+
+                {/* nav */}
+                <Nav></Nav>
+                {/* nav */}
+            </div>
 
 
         </div>
