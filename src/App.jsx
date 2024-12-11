@@ -5,6 +5,7 @@ import Marque from './Component/Pages/Marque/Marque';
 import About from './Component/Pages/About/About';
 import Eyes from './Component/Pages/Eyes/Eyes';
 import Featured from './Component/Pages/Featured/Featured';
+import WorkCards from './Component/Pages/WorkCards/WorkCards';
 
 const App = () => {
   return (
@@ -23,6 +24,8 @@ const App = () => {
         <Eyes></Eyes>
 
         <Featured></Featured>
+
+        <WorkCards></WorkCards>
 
       </Router>
     </div>
