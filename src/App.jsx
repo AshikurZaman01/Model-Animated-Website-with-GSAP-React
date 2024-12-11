@@ -4,6 +4,7 @@ import LandingPage from './Component/Pages/LandingPage/LandingPage';
 import Marque from './Component/Pages/Marque/Marque';
 import About from './Component/Pages/About/About';
 import Eyes from './Component/Pages/Eyes/Eyes';
+import Featured from './Component/Pages/Featured/Featured';
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
         <About></About>
 
         <Eyes></Eyes>
+
+        <Featured></Featured>
 
       </Router>
     </div>
