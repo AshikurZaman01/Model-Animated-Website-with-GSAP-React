@@ -6,15 +6,15 @@ const Featured = () => {
             </div>
 
             <div className="px-20">
-                <div className="cards relative w-full flex gap-20">
+                <div className="cards relative w-full flex gap-20 bg-red-500 p-3 md:flex-row flex-col">
 
 
 
                     {/* First Card */}
-                    <div className="cardContainer w-1/2 h-[75vh] bg-red-500 overflow-hidden">
+                    <div className="cardContainer w-full md:w-1/2 h-[75vh] bg-red-500 overflow-hidden">
 
                         {/* Centered text */}
-                        <h1 className="absolute w-full text-green-500 text-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-8xl font-founders font-semibold tracking-tighter z-10 uppercase">
+                        <h1 className="absolute w-full text-green-500 top-48 text-center md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:text-8xl text-6xl font-founders font-semibold tracking-tighter z-10 uppercase">
                             {
                                 "cardboard spaceship".split('').map((item, index) => (
                                     <span key={index}>{item}</span>
@@ -31,10 +31,10 @@ const Featured = () => {
                     </div>
 
                     {/* Second Card */}
-                    <div className="cardContainer w-1/2 h-[75vh] bg-red-500 overflow-hidden">
+                    <div className="cardContainer w-full md:w-1/2 h-[75vh] bg-red-500 overflow-hidden">
 
                         {/* Centered text */}
-                        <h1 className="absolute w-full text-green-500 text-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-8xl font-founders font-semibold tracking-tighter z-10 uppercase">
+                        <h1 className="absolute w-full text-green-500 text-center bottom-48 md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:text-8xl text-6xl font-founders font-semibold tracking-tighter z-10 uppercase">
                             {
                                 "Ah2 & matt horn".split('').map((item, index) => (
                                     <span key={index}>{item}</span>
