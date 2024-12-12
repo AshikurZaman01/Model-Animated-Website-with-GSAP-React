@@ -6,6 +6,7 @@ import About from './Component/Pages/About/About';
 import Eyes from './Component/Pages/Eyes/Eyes';
 import Featured from './Component/Pages/Featured/Featured';
 import WorkCards from './Component/Pages/WorkCards/WorkCards';
+import Footer from './Component/Pages/Footer/Footer';
 
 const App = () => {
   return (
@@ -26,6 +27,8 @@ const App = () => {
         <Featured></Featured>
 
         <WorkCards></WorkCards>
+
+        <Footer></Footer>
 
       </Router>
     </div>
