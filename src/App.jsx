@@ -7,8 +7,12 @@ import Eyes from './Component/Pages/Eyes/Eyes';
 import Featured from './Component/Pages/Featured/Featured';
 import WorkCards from './Component/Pages/WorkCards/WorkCards';
 import Footer from './Component/Pages/Footer/Footer';
+import LocomotiveScroll from 'locomotive-scroll';
 
 const App = () => {
+
+  const locomotiveScroll = new LocomotiveScroll();
+
   return (
 
     <div className='min-h-screen bg-zinc-800'>

@@ -28,7 +28,7 @@ const Footer = () => {
                 <div className="mt-20">
                     <ul className="font-neuMontreal capitalize">
                         {["facebook", "instagram", 'twitter'].map((item, index) => (
-                            <li key={index} to={`/${item}`} className="text-2xl font-light text-zinc-400">
+                            <li key={index} to={`/${item}`} className="text-2xl my-3 font-light text-zinc-400 hover:text-zinc-200">
                                 <Link>{item}</Link>
                             </li>
                         ))}
