@@ -1,4 +1,11 @@
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { Power4 } from "gsap";
+
 const Featured = () => {
+    const [isHoveringFirst, setIsHoveringFirst] = useState(false);
+    const [isHoveringSecond, setIsHoveringSecond] = useState(false);
+
     return (
         <div className="w-full py-10">
             <div className="w-full px-10 border-b-[1px] border-zinc-700 pb-20">
@@ -6,21 +13,34 @@ const Featured = () => {
             </div>
 
             <div className="px-20">
-                <div className="cards relative w-full flex gap-20 bg-red-500 p-3 md:flex-row flex-col">
-
-
+                <div className="cards relative w-full flex gap-20  p-3 md:flex-row flex-col">
 
                     {/* First Card */}
-                    <div className="cardContainer w-full md:w-1/2 h-[75vh] bg-red-500 overflow-hidden">
+                    <div
+                        onMouseEnter={() => setIsHoveringFirst(true)}
+                        onMouseLeave={() => setIsHoveringFirst(false)}
 
+                        className="cardContainer w-full md:w-1/2 h-[75vh]  overflow-hidden"
+                    >
                         {/* Centered text */}
-                        <h1 className="absolute w-full text-green-500 top-48 text-center md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:text-8xl text-6xl font-founders font-semibold tracking-tighter z-10 uppercase">
-                            {
-                                "cardboard spaceship".split('').map((item, index) => (
-                                    <span key={index}>{item}</span>
-                                ))
-                            }
-                        </h1>
+                        <motion.h1
+                            className="absolute w-full text-green-500 top-48 text-center md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:text-8xl text-6xl font-founders font-semibold tracking-tighter z-10 uppercase"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: isHoveringFirst ? 1 : 0 }}
+                            transition={{ duration: 0.5, ease: Power4.easeInOut }}
+                        >
+                            {"cardboard spaceship".split('').map((item, index) => (
+                                <motion.span
+                                    className="inline-block"
+                                    key={index}
+                                    initial={{ y: "100%" }}
+                                    animate={isHoveringFirst ? { y: "0%" } : { y: "100%" }}
+                                    transition={{ ease: Power4.easeInOut, delay: index * 0.05 }}
+                                >
+                                    {item}
+                                </motion.span>
+                            ))}
+                        </motion.h1>
 
                         <div className="w-full h-full bg-green-400 rounded-xl">
                             <div
@@ -31,16 +51,22 @@ const Featured = () => {
                     </div>
 
                     {/* Second Card */}
-                    <div className="cardContainer w-full md:w-1/2 h-[75vh] bg-red-500 overflow-hidden">
-
+                    <div
+                        onMouseEnter={() => setIsHoveringSecond(true)}
+                        onMouseLeave={() => setIsHoveringSecond(false)}
+                        className="cardContainer w-full md:w-1/2 h-[75vh]  overflow-hidden"
+                    >
                         {/* Centered text */}
-                        <h1 className="absolute w-full text-green-500 text-center bottom-48 md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:text-8xl text-6xl font-founders font-semibold tracking-tighter z-10 uppercase">
-                            {
-                                "Ah2 & matt horn".split('').map((item, index) => (
-                                    <span key={index}>{item}</span>
-                                ))
-                            }
-                        </h1>
+                        <motion.h1
+                            className="absolute w-full text-green-500 text-center bottom-48 md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:text-8xl text-6xl font-founders font-semibold tracking-tighter z-10 uppercase"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: isHoveringSecond ? 1 : 0 }}
+                            transition={{ duration: 0.5, ease: Power4.easeInOut }}
+                        >
+                            {"Ah2 & matt horn".split('').map((item, index) => (
+                                <span key={index}>{item}</span>
+                            ))}
+                        </motion.h1>
 
                         <div className="w-full h-full bg-green-400 rounded-xl">
                             <div

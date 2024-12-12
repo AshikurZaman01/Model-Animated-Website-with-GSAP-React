@@ -16,7 +16,7 @@ const Eyes = () => {
             const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
             setEyeRotation(angle);
 
-            const pupilAngle = (angle - 180) * 0.3; // Adjusted pupil movement speed
+            const pupilAngle = (angle - 180) * 0.3; 
             setPupilRotation(pupilAngle);
         };
 
@@ -28,10 +28,14 @@ const Eyes = () => {
     }, []);
 
     return (
-        <div className="w-full h-screen overflow-hidden">
+        <div className="w-full h-screen overflow-hidden"
+        >
             <div
                 className="w-full h-full bg-cover bg-center relative"
                 style={{ backgroundImage: `url(${image})` }}
+                data-scroll
+                data-scroll-section
+                data-scroll-speed="-0.7"
             >
                 <div className="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] flex gap-20">
 

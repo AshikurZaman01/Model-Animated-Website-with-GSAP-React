@@ -18,7 +18,7 @@ const LandingText = () => {
                                     <motion.div
                                         initial={{ width: "0vw" }} animate={{ width: "9vw" }} transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
                                         className="w-[9vw] h-[5vw] mr-2 rounded overflow-hidden  relative -top-[1vw]">
-                                        <img src={image} alt="" />
+                                        <img className="w-full h-full object-cover"  src={image} alt="" />
                                     </motion.div>
                                 )
                             }
