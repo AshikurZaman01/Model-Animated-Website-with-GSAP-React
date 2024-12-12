@@ -10,6 +10,8 @@ import WorkCards from './Component/Pages/WorkCards/WorkCards';
 import Footer from './Component/Pages/Footer/Footer';
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
+import Featured02 from './Component/Pages/Featured/Featured02';
+import Featured03 from './Component/Pages/Featured/Featured03';
 
 const App = () => {
   useEffect(() => {
@@ -32,6 +34,8 @@ const App = () => {
         <About />
         <Eyes />
         <Featured />
+        <Featured02></Featured02>
+        <Featured03></Featured03>
         <WorkCards />
         <Footer />
       </Router>

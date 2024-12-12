@@ -1,6 +1,9 @@
 const WorkCards = () => {
     return (
-        <div className="w-full bg-zinc-100 h-screen flex flex-col md:flex-row gap-5 py-32 px-10">
+        <div className="w-full bg-zinc-100 h-screen flex flex-col md:flex-row gap-5 py-32 px-10"
+            data-scroll
+            data-scroll-section
+            data-scroll-speed="-0.1">
 
             {/* First Card */}
             <div className="cardContainer md:h-[50vh] w-full md:w-1/2 px-5 cursor-pointer transition-transform duration-300 hover:scale-105">

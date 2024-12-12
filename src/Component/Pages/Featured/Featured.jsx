@@ -13,14 +13,13 @@ const Featured = () => {
             </div>
 
             <div className="px-20">
-                <div className="cards relative w-full flex gap-20  p-3 md:flex-row flex-col">
+                <div className="cards relative w-full flex gap-20 p-3 md:flex-row flex-col">
 
                     {/* First Card */}
                     <div
                         onMouseEnter={() => setIsHoveringFirst(true)}
                         onMouseLeave={() => setIsHoveringFirst(false)}
-
-                        className="cardContainer w-full md:w-1/2 h-[75vh]  overflow-hidden"
+                        className="cardContainer w-full md:w-1/2 h-[75vh] overflow-hidden"
                     >
                         {/* Centered text */}
                         <motion.h1
@@ -42,19 +41,23 @@ const Featured = () => {
                             ))}
                         </motion.h1>
 
-                        <div className="w-full h-full bg-green-400 rounded-xl">
+                        <motion.div
+                            className="w-full h-full bg-green-400 rounded-md" 
+                            whileHover={{ scale: 0.95 }}  
+                            transition={{ duration: 0.3 }}
+                        >
                             <div
-                                className="w-full h-full bg-cover"
+                                className="w-full h-full bg-cover rounded-md"  
                                 style={{ backgroundImage: 'url("https://ochi.design/wp-content/uploads/2024/08/CS_Website_1-663x551.png")' }}
                             ></div>
-                        </div>
+                        </motion.div>
                     </div>
 
                     {/* Second Card */}
                     <div
                         onMouseEnter={() => setIsHoveringSecond(true)}
                         onMouseLeave={() => setIsHoveringSecond(false)}
-                        className="cardContainer w-full md:w-1/2 h-[75vh]  overflow-hidden"
+                        className="cardContainer w-full md:w-1/2 h-[75vh] overflow-hidden"
                     >
                         {/* Centered text */}
                         <motion.h1
@@ -68,18 +71,22 @@ const Featured = () => {
                             ))}
                         </motion.h1>
 
-                        <div className="w-full h-full bg-green-400 rounded-xl">
+                        <motion.div
+                            className="w-full h-full bg-green-400 rounded-md"  
+                            whileHover={{ scale: 0.95 }}  
+                            transition={{ duration: 0.3 }}
+                        >
                             <div
-                                className="w-full h-full bg-cover"
+                                className="w-full h-full bg-cover rounded-md"  
                                 style={{ backgroundImage: 'url("https://ochi.design/wp-content/uploads/2024/08/Frame-481692-1-663x551.png")' }}
                             ></div>
-                        </div>
+                        </motion.div>
                     </div>
 
                 </div>
             </div>
         </div>
     );
-}
+};
 
 export default Featured;

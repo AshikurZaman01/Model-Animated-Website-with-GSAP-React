@@ -2,9 +2,14 @@ import { Link } from "react-router-dom"
 
 const Footer = () => {
     return (
-        <div className="w-full h-screen bg-zinc-900 p-20 flex justify-between">
+        <div className="w-full h-screen bg-zinc-900 p-20 flex justify-between"
+            data-scroll
+            data-scroll-section
+            data-scroll-speed="-0.2"
+        >
 
-            <div className="w-1/2 font-founders flex flex-col justify-between h-full">
+            <div className="w-1/2 font-founders flex flex-col justify-between h-full"
+            >
 
                 <div className="heading">
                     <h1 className="text-[8vw] font-semibold uppercase leading-none -mb-10 text-zinc-100">eye-</h1>
